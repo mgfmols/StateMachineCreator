@@ -1,0 +1,16 @@
+{
+  "name": "nl.mgfmols.statemachinecreator",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "unityRelease": "15f1",
+  "displayName": "State Machine Creator",
+  "description": "State Machine Creator allows you to create state machines fast, which you can fully customize in code.",
+  "keywords": [
+    "statemachines"
+  ],
+  "author": {
+    "name": "Michael Mols",
+    "email": "example@email.com",
+    "url": "https://mgfmols.nl"
+  }
+}
