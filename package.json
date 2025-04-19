@@ -1,6 +1,6 @@
 {
   "name": "nl.mgfmols.statemachinecreator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2021.3",
   "unityRelease": "15f1",
   "displayName": "State Machine Creator",

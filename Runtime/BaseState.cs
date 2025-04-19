@@ -21,21 +21,21 @@ namespace State_Machine_Creator.Runtime
         {
             PreviousStateKey = previousStateKey;
         }
-        public void ExitState() { }
-        public void UpdateState() { }
-        public void FixedUpdateState() { }
-        public TState GetNextState() { return StateKey; }
-        public void OnTriggerEnter(Collider other) { }
-        public void OnTriggerStay(Collider other) { }
-        public void OnTriggerExit(Collider other) { }
-        public void OnCollisionEnter(Collision collision) { }
-        public void OnCollisionStay(Collision collision) { }
-        public void OnCollisionExit(Collision collision) { }
-        public void OnTriggerEnter2D(Collider2D other) { }
-        public void OnTriggerStay2D(Collider2D other) { }
-        public void OnTriggerExit2D(Collider2D other) { }
-        public void OnCollisionEnter2D(Collision2D collision) { }
-        public void OnCollisionStay2D(Collision2D collision) { }
-        public void OnCollisionExit2D(Collision2D collision) { }
+        public virtual void ExitState() { }
+        public virtual void UpdateState() { }
+        public virtual void FixedUpdateState() { }
+        public virtual TState GetNextState() { return StateKey; }
+        public virtual void OnTriggerEnter(Collider other) { }
+        public virtual void OnTriggerStay(Collider other) { }
+        public virtual void OnTriggerExit(Collider other) { }
+        public virtual void OnCollisionEnter(Collision collision) { }
+        public virtual void OnCollisionStay(Collision collision) { }
+        public virtual void OnCollisionExit(Collision collision) { }
+        public virtual void OnTriggerEnter2D(Collider2D other) { }
+        public virtual void OnTriggerStay2D(Collider2D other) { }
+        public virtual void OnTriggerExit2D(Collider2D other) { }
+        public virtual void OnCollisionEnter2D(Collision2D collision) { }
+        public virtual void OnCollisionStay2D(Collision2D collision) { }
+        public virtual void OnCollisionExit2D(Collision2D collision) { }
     }
 }
