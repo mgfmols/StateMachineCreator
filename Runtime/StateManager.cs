@@ -23,6 +23,11 @@ namespace State_Machine_Creator.Runtime
             _currentState.EnterState(_previousState.StateKey);
         }
 
+        private void OnDestroy()
+        {
+            _currentState.ExitState();
+        }
+
         private void Update()
         {
             if (StateUnchanged(out var nextStateKey))
