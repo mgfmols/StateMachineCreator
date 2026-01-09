@@ -1,8 +1,8 @@
 {
   "name": "nl.mgfmols.statemachinecreator",
   "version": "1.0.4",
-  "unity": "2021.3",
-  "unityRelease": "15f1",
+  "unity": "6000.3",
+  "unityRelease": "2f1",
   "displayName": "State Machine Creator",
   "description": "State Machine Creator allows you to create state machines fast, which you can fully customize in code.",
   "keywords": [
@@ -10,7 +10,7 @@
   ],
   "author": {
     "name": "Michael Mols",
-    "email": "example@email.com",
+    "email": "contract@mgfmols.com",
     "url": "https://mgfmols.nl"
   }
 }
