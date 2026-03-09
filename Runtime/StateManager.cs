@@ -12,6 +12,7 @@ namespace State_Machine_Creator.Runtime
     public abstract class StateManager<TState> : MonoBehaviour where TState : Enum
     {
         [SerializeField, DisableInEditMode, DisableInPlayMode] protected TState state;
+        public TState GetState() { return state; }
         protected readonly Dictionary<TState, BaseState<TState>> States = new();
         private BaseState<TState> _currentState;
         private BaseState<TState> _previousState;
