@@ -19,32 +19,75 @@ namespace State_Machine_Creator.Runtime.Player
 
         protected void InputHookPerformed(string inputMap, Action<InputAction.CallbackContext> code)
         {
-            Context.Input.currentActionMap[inputMap].performed += code;
+            if (TryGetInputAction(inputMap, out var action))
+            {
+                action.performed += code;
+            }
         }
 
         protected void InputUnhookPerformed(string inputMap, Action<InputAction.CallbackContext> code)
         {
-            Context.Input.currentActionMap[inputMap].performed -= code;
+            if (TryGetInputAction(inputMap, out var action))
+            {
+                action.performed -= code;
+            }
         }
 
         protected void InputHookCancelled(string inputMap, Action<InputAction.CallbackContext> code)
         {
-            Context.Input.currentActionMap[inputMap].canceled += code;
+            if (TryGetInputAction(inputMap, out var action))
+            {
+                action.canceled += code;
+            }
         }
 
         protected void InputUnhookCancelled(string inputMap, Action<InputAction.CallbackContext> code)
         {
-            Context.Input.currentActionMap[inputMap].canceled -= code;
+            if (TryGetInputAction(inputMap, out var action))
+            {
+                action.canceled -= code;
+            }
         }
 
         protected void InputHookStarted(string inputMap, Action<InputAction.CallbackContext> code)
         {
-            Context.Input.currentActionMap[inputMap].started += code;
+            if (TryGetInputAction(inputMap, out var action))
+            {
+                action.started += code;
+            }
         }
 
         protected void InputUnhookStarted(string inputMap, Action<InputAction.CallbackContext> code)
         {
-            Context.Input.currentActionMap[inputMap].started -= code;
+            if (TryGetInputAction(inputMap, out var action))
+            {
+                action.started -= code;
+            }
+        }
+
+        private bool TryGetInputAction(string inputMap, out InputAction inputAction)
+        {
+            inputAction = null;
+            
+            var input = Context.Input;
+            if (!input)
+            {
+                return false;
+            }
+
+            var actionMap = input.currentActionMap;
+            if (actionMap == null)
+            {
+                return false;
+            }
+
+            var action = actionMap.FindAction(inputMap);
+            if (action == null)
+            {
+                return false;
+            }
+            inputAction = action;
+            return true;
         }
     }
 }
